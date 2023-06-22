@@ -1,0 +1,58 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-warning mb-5 border-bottom">CONTACT US</h1>
+    <div class="row text-white mb-5">
+        <p class="mx-auto mb-5">
+            Do You have any questions? Please do not hesitate to contact. I will come back to you within a matter of hours to help you.
+        </p>
+        <div class="col-sm-9 mb-5">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputName">Your Name</label>
+                        <input name="name" type="text" class="form-control" id="inputName">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail">Your Email</label>
+                        <input name="email" type="email" class="form-control" id="inputEmail" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputSubject">Your Subject</label>
+                    <input name="subject" type="text" class="form-control" id="inputSubject" >
+                </div>
+                <div class="mb-3">
+                    <label for="inputTextarea">Your message</label>
+                    <textarea name="area" class="form-control" id="inputTextarea" required></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+        <!-- <div class="col-sm-3 text-center">
+            <ul class="list-unstyled">
+                <li>
+                    <i class="fas fa-phone mt-4 fa-2x i-color"></i>
+                    <p>+ 91 8122472902</p>
+                </li>
+                <li>
+                    <i class="fas fa-phone mt-4 fa-2x i-color"></i>
+                    <p>+ 91 8122472902</p>
+                </li>
+                <li>
+                    <i class="fas fa-phone mt-4 fa-2x i-color"></i>
+                    <p>+ 91 8122472902</p>
+                </li>
+            </ul>
+        </div> -->
+    </div>
+</div>
+<div class="text-center">
+    <a href="https://www.facebook.com/profile.php?id=100071145216595"><i class="fa-brands fa-facebook mr-3 fa-2x a"></i></a>
+    <a href="https://www.linkedin.com/in/prakash-pramanik-885421245"><i class="fa-brands fa-linkedin mr-3 fa-2x a"></i></a>
+    <a href="https://wa.me/+917077605586"><i class="fa-brands fa-whatsapp mr-3 fa-2x a"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram mr-3 fa-2x a"></i></a>
+</div>
+{% endblock content %}
